@@ -42,9 +42,9 @@ var date = d.getDate();
 var month = d.getMonth()+1;
 var day = d.getDay();
 
-var dayDiff = 7-day;
+var Diff = 7-day;
 
-date = date + dayDiff+7;
+date = date + Diff+7;
 var week=$('.week');
 for(i=1;i<=28;i++)
  {
@@ -57,6 +57,12 @@ for(i=1;i<=28;i++)
       }
 
     var td = "<td onclick = \"showDate(this)\">"+date+"</td>";
+    if(date == 1)
+    {
+      var td = "<td class = \"dateActive\"onclick = \"showDate(this)\">"+date+"</td>";
+    }
+
+
     if(month%2 == 0)
     {
       if(date == 30)
@@ -69,7 +75,7 @@ for(i=1;i<=28;i++)
         }
       if(month == 2)
       {
-        if(date==28)
+        if(date>=28)
           {
             date = 1;
 
@@ -92,6 +98,8 @@ for(i=1;i<=28;i++)
         }
     }
 
+
+
    week.append(td);
  }
 
@@ -100,6 +108,8 @@ function showDate(evt)
 {
   var repayDate=$('.repayDate');
   var $d = $('td');
+  $d.removeClass('dateActive');
+  evt.className="dateActive";
   var i = -1;
   var d = $('td').index(evt);
   var day;
@@ -165,9 +175,17 @@ function amountToggle(slider)
   var amount=$('.amount');
   var interest=$('#interest');
   var totalAmount = $('#totalAmount');
+
+
+  var colorRatio = (slider.value-100)/3;
+  //var color = 100-2*colorRatio;
   var rate = 17.60+(slider.value-100)/10*1.76;
   var interestRate = rate.toPrecision(4);
-  var total = parseInt(slider.value) + rate;
+  var total = (parseInt(slider.value) + rate).toPrecision(5);
+
+  $('#amountRange').css({
+    "background": "-webkit-linear-gradient(left, blue "+colorRatio+"%,green "+colorRatio+"%,gray)"});
+
   amount.text('$ '+slider.value);
   interest.text('$ '+interestRate);
   totalAmount.text('$ '+total);

@@ -1,0 +1,385 @@
+#intro{
+  height:100%;
+}
+
+.intro-header
+{
+  height: 90%;
+}
+
+.row
+{
+  margin-top:20px;
+}
+#mainContainer
+{
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+  text-align:center;
+  height:100%;
+}
+
+
+#header
+{
+  padding:10px;
+  text-align:center;
+ background-color: rgba(0,0,0,0);
+}
+
+#logo
+{
+  width:100px;
+  hight:70px;
+  float: left;
+  margin-left:200px;
+  display: inline-block;
+}
+
+img{
+  width:100%;
+  height:100%;
+}
+
+#signInBtn
+{
+  display:inline-block;
+  width:70px;
+  height:30px;
+    margin-top:20px;
+    margin-left:120px;
+  text-align: center;
+  background-color:#4494E5;
+  padding:5px 0;
+}
+
+#signInBtn a{
+  color:white;
+
+  text-decoration: none;
+}
+.intro-message
+{
+  width:40%;
+  margin-top:150px;
+ float:left;
+    display:inline-block;
+}
+
+
+
+.intro-header
+{
+
+
+background:] url(../img/contact-bg.jpg) ;
+
+background-repeat: repeat;
+background-size: auto;
+background-position:top;
+background-blend-mode: soft-light;
+}
+
+#heading
+{
+  font-size:45px;
+}
+
+/****************  loanForm *****************/
+
+.loanForm
+{
+
+
+  font-size:12px;
+ width:400px;
+
+ border-radius:4px;
+  background-color: white;
+  display:inline-block;
+background-color:#F5F7FA;
+  margin-bottom:-20px;
+  margin-top:10px;
+  color:rgb(93,107,126);
+}
+
+#mailLink
+{
+  font-size:14px;
+  display:block;
+  margin-top:10px;
+}
+
+#loanHeader
+{
+  background-color:white;
+  border-radius: 4px;
+  padding:0 10px;
+}
+.bold
+{
+  font-weight: bolder;
+  font-size:20px;
+}
+#formHead
+{
+  height:80px;
+padding:10px;
+}
+
+#selected-date
+{
+  margin-top:20px;
+  font-size:14px;
+  text-align : left;
+}
+#calender
+{
+
+  margin:10px;
+  text-align:center;
+
+  border: 1px solid gray;
+}
+
+#calender table{
+  list-style-type: none;
+  padding:0px;
+width:100%;
+  font-size:16px;
+
+  border:1px solid #F5F7FA;
+}
+
+#calender table tr{
+  text-align:center;
+}
+
+#tableHeading
+{
+  background-color:#F5F7FA;
+}
+#calender table tr th{
+text-align: center;
+  margin:0px;
+  width:14%;
+padding:8px 0;
+}
+
+#calender table tr td{
+
+  margin:0px;
+  width:14%;
+padding:14px 0px;
+
+}
+
+
+#dates
+{
+  text-align: left;
+}
+
+#dates li
+{
+
+  text-align:center;
+}
+
+
+#loanFooter
+{
+  padding:10px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #F5F7FA;
+}
+#details
+{
+
+  width:100%;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.detailBox
+{
+  display:inline-block;
+  margin:2px 15px;
+}
+
+.detailBox ul
+{
+  list-style-type: none;
+  margin-left:-30px;
+
+}
+
+#submitBtn
+{
+  width:80%;
+  height:50px;
+  color:white;
+  font-size:16px;
+  margin-top: 20px;
+  background-color: #77C550;
+}
+
+#lend
+{
+  background-color:dodgerblue;
+  width:20%;
+  height:30px;
+  text-align: right;
+  padding:5px;
+  position:absolute;
+  margin-top:-30px;
+  margin-bottom: 0;
+
+}
+
+/********************************************************/
+
+/********* slider ********************/
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  margin-top:20px;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position:relative;
+  z-index: 1;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+
+/**** thumb*****/
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid #C7CDD5;
+  height: 50px;
+  width: 50px;
+
+  border-radius: 50%;
+  background: #FAFBFC;
+  cursor: pointer;
+  margin-top: -22px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+input[type=range]::-webkit-slider-thumb:before{
+  content:"|||";
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+ /**********************************************/
+
+ /************** Tracks of slider ****************/
+
+ input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: gray;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: gray;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: gray;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: gray;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: gray;
+}
+input[type=range]::-ms-fill-upper {
+  background: gray;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: gray;
+}
+
+/*************** Slider ends ********************/
+
+.label
+{
+  color:rgb(93,107,126);
+  display:inline-block;
+  margin-top:10px;
+  font-size: 15px;
+  float:left;
+}
+
+#endLabel
+{
+  float:right;
+}

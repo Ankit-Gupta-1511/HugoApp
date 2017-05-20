@@ -1,0 +1,126 @@
+
+
+<section id="intro">
+	<!-- Header -->
+
+
+
+	<div class="intro-header">
+
+	    <div class="container-fluid" style="height:100%">
+
+        <div class="container-fluid" id="header">
+          <div id="logo">
+            <img src="img/logo.PNG" alt="LendUP"/>
+
+          </div>
+
+        <div id="signInBtn">  <a href="#">Sign In</a></div>
+
+    </div>
+		<div class="row" style="height:100%">
+
+		    <div class="container-fluid" id="mainContainer">
+			<div class="intro-message">
+
+			    <h2 id="heading">{{ .Site.Params.description }}</h2>
+
+                <h4>{{ .Site.Params.subDescription }}</h4>
+
+
+
+			</div>
+      <!-- calender  -->
+      <div class="loanForm">
+          <form>
+            <div id = "loanHeader">
+            <div id="formHead">
+                  Amount : <span class="amount bold">$100</span>
+                  <input type ="range" id="amountRange" value="100" min="100" max="250" step="10" onchange="amountToggle(this)">
+                  <span class="label">100</span>
+                  <span class="label" id="endLabel">250</span>
+            </div>
+            <div id = "selected-date">
+              Repay On : <span class="repayDate"></span>
+            </div>
+            <div id="calender">
+              <table>
+                <tr id="tableHeading">
+                  <th>S</th>
+                  <th>M</th>
+                  <th>T</th>
+                  <th>W</th>
+                  <th>T</th>
+                  <th>F</th>
+                  <th>S</th>
+                </tr>
+                <tr class="week"></tr>
+                <tr class="week"></tr>
+                <tr class="week"></tr>
+                <tr class="week"></tr>
+
+              </table>
+
+            </div>
+          </div>
+            <div id="loanFooter">
+            <div id="details">
+              <div class="detailBox">
+                <ul>
+                  <li>
+                      Amount
+                  </li>
+                  <li>
+                      <span class="amount bold">$100</span>
+                  </li>
+                  <li>
+                    for <span id="dayDiff">10</span> days
+                  </li>
+                </ul>
+              </div>
+
+              <div class="detailBox">
+                <ul>
+                  <li>
+                      Interest
+                  </li>
+                  <li>
+                      <span id="interest" class="bold">$17.60</span>
+                  </li>
+                  <li>
+                    APR: <span>642.40</span>%
+                  </li>
+                </ul>
+              </div>
+
+              <div class="detailBox">
+                <ul>
+                  <li>
+                      Repayment
+                  </li>
+                  <li>
+                      <span id="totalAmount" class="bold">$117.60</span>
+                  </li>
+                  <li>
+                    on  <span class="repayDate">Jun 01,2017</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <button input="submit" id="submitBtn">Apply Now</button>
+            <br>
+            <a href="#" id="mailLink">Responding to a mail offer?</a>
+      </div>
+          </form>
+      </div>
+		    </div>
+		</div>
+
+	    </div>
+	    <!-- /.container -->
+<div id="lend">{{ .Site.Params.note }}</div>
+	</div>
+	<!-- /.intro-header -->
+
+</section>

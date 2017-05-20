@@ -178,13 +178,13 @@ function amountToggle(slider)
 
 
   var colorRatio = (slider.value-100)/3;
-  //var color = 100-2*colorRatio;
+  var color = (2*colorRatio)+10;
   var rate = 17.60+(slider.value-100)/10*1.76;
   var interestRate = rate.toPrecision(4);
   var total = (parseInt(slider.value) + rate).toPrecision(5);
 
   $('#amountRange').css({
-    "background": "-webkit-linear-gradient(left, blue "+colorRatio+"%,green "+colorRatio+"%,gray)"});
+    "background": "-webkit-linear-gradient(left, #4695D3,#58A243 "+colorRatio+"%,lightgray "+color+"%)"});
 
   amount.text('$ '+slider.value);
   interest.text('$ '+interestRate);

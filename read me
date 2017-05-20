@@ -1,0 +1,6 @@
+This is a an imitation of already existing app using markdown language and hugo generator.
+
+Steps to checkout the site:
+1) Install Hugo(It is already present in the repository).
+2) Run hugo server command from hugoapp folder.
+3) The site will run on localhost port 1313
